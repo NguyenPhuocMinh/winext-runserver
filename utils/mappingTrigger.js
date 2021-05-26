@@ -41,23 +41,12 @@ function MappingTrigger(params = {}) {
         reject('mapping not found');
       }
       if (!isEmpty(mappings) && isArray(mappings)) {
-        return mappings.map(mapping => {
-          const method = get(mapping, 'method')
-          const pathName = get(mapping, 'pathName');
-          const serviceName = get(mapping, 'serviceName');
-          const methodName = get(mapping, 'methodName');
-          const input = get(mapping, 'input') || {};
-          const output = get(mapping, 'output') || {};
-          const service = serviceName[methodName];
-
-          if (isEmpty(method)) {
-            reject('method not found');
-          };
-
+        for (let i = 0; i < mappings.length; i++) {
           const serviceParams = {};
+          const service = get(mappings[i], 'serviceName');
 
-          if (serviceName['register'].hasOwnProperty('reference')) {
-            const reference = serviceName['register'].reference;
+          if (service['register'].hasOwnProperty('reference')) {
+            const reference = service['register'].reference;
             if (reference.hasOwnProperty('dataStore')) {
               const _dataStore = reference['dataStore'];
               if (_dataStore === 'app-repository/dataStore') {
@@ -70,8 +59,22 @@ function MappingTrigger(params = {}) {
                 serviceParams.errorManager = errorManager;
               }
             }
-            serviceName['register'](serviceParams);
+            service['register'](serviceParams);
           }
+        }
+
+        return mappings.map(mapping => {
+          const method = get(mapping, 'method')
+          const pathName = get(mapping, 'pathName');
+          const serviceName = get(mapping, 'serviceName');
+          const methodName = get(mapping, 'methodName');
+          const input = get(mapping, 'input') || {};
+          const output = get(mapping, 'output') || {};
+          const service = serviceName[methodName];
+
+          if (isEmpty(method)) {
+            reject('method not found');
+          };
 
           app.use(contextPath, router[toLower(method)](pathName, (
             request, response, next) => handleMapping({
