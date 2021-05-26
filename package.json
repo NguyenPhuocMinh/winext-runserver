@@ -2,7 +2,7 @@
   "name": "winext-runserver",
   "version": "1.0.0",
   "description": "Build server express with lib winext",
-  "homepage": "https://github.com/NguyenPhuocMinh/app-runserver",
+  "homepage": "https://github.com/NguyenPhuocMinh/winext-runserver",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
