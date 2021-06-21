@@ -1,6 +1,6 @@
 {
   "name": "winext-runserver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Build server express with lib winext",
   "homepage": "https://github.com/NguyenPhuocMinh/winext-runserver",
   "main": "index.js",
