@@ -26,7 +26,7 @@ function MappingTrigger(params = {}) {
     /**
      * check token middleware
      */
-    if(!isEmpty(authorization)) {
+    if (!isEmpty(authorization)) {
       app.use(contextPath,
         authorization.noVerifyToken,
         authorization.verifyTokenMiddleware,
@@ -48,18 +48,34 @@ function MappingTrigger(params = {}) {
 
           if (service['register'].hasOwnProperty('reference')) {
             const reference = service['register'].reference;
+            /**
+             * Add dataStore to params service
+             */
             if (reference.hasOwnProperty('dataStore')) {
               const _dataStore = reference['dataStore'];
               if (_dataStore === 'app-repository/dataStore') {
                 serviceParams.dataStore = repository.dataStore;
               }
             }
+            /**
+             * Add dataSequelize to params service
+             */
+            if (reference.hasOwnProperty('dataSequelize')) {
+              const _dataSequelize = reference['dataSequelize'];
+              if (_dataSequelize === 'app-repository/dataSequelize') {
+                serviceParams.dataSequelize = repository.dataSequelize;
+              }
+            }
+            /**
+             * Add errorManager to params service
+             */
             if (reference.hasOwnProperty('errorManager')) {
               const _errorManager = reference['errorManager'];
               if (_errorManager === 'app-runserver/errorManager') {
                 serviceParams.errorManager = errorManager;
               }
             }
+
             service['register'](serviceParams);
           }
         }
