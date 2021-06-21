@@ -26,13 +26,14 @@ function MappingTrigger(params = {}) {
     /**
      * check token middleware
      */
-    app.use(contextPath,
-      authorization.noVerifyToken,
-      authorization.verifyTokenMiddleware,
-      authorization.publicPaths,
-      authorization.protectedRouter
-    );
-
+    if(!isEmpty(authorization)) {
+      app.use(contextPath,
+        authorization.noVerifyToken,
+        authorization.verifyTokenMiddleware,
+        authorization.publicRouters,
+        authorization.protectedRouters
+      );
+    }
     /**
      *  mappings
      */
