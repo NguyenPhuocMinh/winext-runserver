@@ -4,7 +4,6 @@ const winext = require('winext');
 const Promise = winext.require('bluebird');
 const lodash = winext.require('lodash');
 const handleMapping = require('../middleware/handleMapping');
-const errorManager = require('./errorManager');
 const { get, isEmpty, isArray, toLower } = lodash;
 
 function MappingTrigger(params = {}) {
@@ -15,6 +14,7 @@ function MappingTrigger(params = {}) {
   const repository = get(params, 'repository');
   const authorization = get(params, 'authorization');
   const loggerFactory = get(params, 'loggerFactory');
+  const errorManager = get(params, 'errorManager');
 
   const contextPath = get(config, 'contextPath');
 
@@ -71,7 +71,7 @@ function MappingTrigger(params = {}) {
              */
             if (reference.hasOwnProperty('errorManager')) {
               const _errorManager = reference['errorManager'];
-              if (_errorManager === 'app-runserver/errorManager') {
+              if (_errorManager === 'app-error-manager/errorManager') {
                 serviceParams.errorManager = errorManager;
               }
             }
