@@ -21,6 +21,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#55c35dff20da2f32f3bba1841fd18ad7110477e3"
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#c5b647643aa10d69c496de28d94ab3c94bcea538"
   }
 }
