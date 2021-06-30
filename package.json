@@ -21,6 +21,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
     "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#8e56beccf30f91c36fed9a3ebb18cc1f3f2fd420"
   }
 }
