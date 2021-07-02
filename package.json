@@ -23,7 +23,7 @@
     "morgan": "^1.10.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#8e56beccf30f91c36fed9a3ebb18cc1f3f2fd420"
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#5c42bcb7d363c86d066dcb3d8e9535d4f54d793d"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
