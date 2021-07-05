@@ -21,9 +21,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "socket.io": "^4.1.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#5c42bcb7d363c86d066dcb3d8e9535d4f54d793d"
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#9285c0176563b149f4f727cbfc8db4fef5d72af6"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
