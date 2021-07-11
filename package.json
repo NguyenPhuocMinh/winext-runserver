@@ -27,7 +27,7 @@
     "socket.io": "^4.1.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#1018f037dedbd3b1420a35524c8d6d237126e832"
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#194ce25116e1e2778a9e7ef65344bee733406222"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
