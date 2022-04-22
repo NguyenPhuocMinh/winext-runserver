@@ -19,6 +19,8 @@
   "author": "Minh Nguyễn",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-core": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -27,7 +29,7 @@
     "socket.io": "^4.1.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#022d27cb301f3b0d8c9c5b0ee0943202af1f5871",
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#4cd75973033ad07c6a1ab7399c68098c4cca5916",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
