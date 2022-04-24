@@ -24,12 +24,13 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "helmet": "^4.6.0",
     "morgan": "^1.10.0",
     "socket.io": "^4.1.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#e8993dea38a98f3b06b974f292229d6c3bd9e134",
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#9d51f82ec0b867cbd072ec2a05031653d2c25ba3",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
