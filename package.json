@@ -22,6 +22,7 @@
     "apollo-server-core": "^3.6.7",
     "apollo-server-express": "^3.6.7",
     "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
