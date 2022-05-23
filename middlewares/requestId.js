@@ -7,7 +7,7 @@ const ATTRIBUTE_KEY = 'requestID';
 
 const requestIdMiddleware = () => {
   return (req, res, next) => {
-    const generator = uuidUtils.v4;
+    const generator = uuidUtils.generateRequestID;
     const headerName = 'X-Request-Id';
 
     const oldRequestID = req.get(headerName);
