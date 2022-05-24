@@ -11,7 +11,7 @@ const requestIdMiddleware = () => {
     const headerName = 'X-Request-Id';
 
     const oldRequestID = req.get(headerName);
-    const requestID = oldRequestID === undefined ? generator : oldRequestID;
+    const requestID = oldRequestID === undefined ? generator() : oldRequestID;
 
     res.set(headerName, requestID);
     req[ATTRIBUTE_KEY] = requestID;
