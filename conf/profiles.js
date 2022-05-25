@@ -16,6 +16,8 @@ const protocol = process.env.PROTOCOL;
 const portServer = process.env.SERVER_PORT;
 const hostServer = process.env.SERVER_HOST;
 
+const pathServer = `${protocol}://${hostServer}:${portServer}`;
+
 const profiles = {
   isProduction,
   contextPath,
@@ -25,6 +27,7 @@ const profiles = {
   protocol,
   portServer,
   hostServer,
+  pathServer
 };
 
 module.exports = profiles;
