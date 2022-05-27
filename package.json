@@ -31,7 +31,7 @@
     "socket.io": "^4.1.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#6f748f4fdcf0bf64354c94271519c7741c63b175",
+    "winext": "git+https://github.com/NguyenPhuocMinh/winext.git#30c11466c8469db2be57db865dca588f624aa969",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
